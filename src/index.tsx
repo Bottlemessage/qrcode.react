@@ -23,6 +23,7 @@ type ImageSettings = {
   height: number;
   width: number;
   excavate: boolean;
+  crossOrigin: any,
   x?: number;
   y?: number;
 };
@@ -310,6 +311,7 @@ const QRCodeCanvas = React.forwardRef(function QRCodeCanvas(
         src={imgSrc}
         key={imgSrc}
         style={{display: 'none'}}
+        crossorigin={imageSettings?.crossOrigin || "Anonymous"}
         onLoad={() => {
           setIsImageLoaded(true);
         }}
