@@ -311,6 +311,8 @@ const QRCodeCanvas = React.forwardRef(function QRCodeCanvas(
         src={imgSrc}
         key={imgSrc}
         style={{display: 'none'}}
+        width={imageSettings?.width || '100px'}
+        height={imageSettings?.height || '100px'}
         crossOrigin={imageSettings?.crossOrigin || 'Anonymous'}
         onLoad={() => {
           setIsImageLoaded(true);
